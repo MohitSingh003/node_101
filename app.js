@@ -22,7 +22,11 @@ const server = http.createServer((req, res)=>{
             const parsedData = Buffer.concat(body).toString();
             const message = parsedData.split('=')[1];
             console.log(message);
-            fs.writeFileSync('message.txt', message);
+            fs.writeFile('message.txt', message, (error)=>{
+                res.statusCode=201;
+                res.setHeader('Location','/');
+                return res.end();
+            });
         })
         
     }
