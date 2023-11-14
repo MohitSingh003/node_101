@@ -1,0 +1,15 @@
+{
+  "name": "npm_script",
+  "version": "1.0.0",
+  "description": "Just an npm script",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Mohitsingh Sahare",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
